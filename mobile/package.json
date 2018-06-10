@@ -9,11 +9,11 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
+    "start": "../wml_script.sh && react-native-scripts start",
     "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "jest"
+    "android": "../wml_script.sh && react-native-scripts android",
+    "ios": "../wml_script.sh && react-native-scripts ios",
+    "test": "../wml_script.sh && jest"
   },
   "jest": {
     "preset": "jest-expo"

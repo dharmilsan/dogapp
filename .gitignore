@@ -1,0 +1,5 @@
+web/screens
+mobile/screens
+**/node_modules
+web/.next
+screens/.watchmanconfig
