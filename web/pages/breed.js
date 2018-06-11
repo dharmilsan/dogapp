@@ -8,7 +8,8 @@ const Breed = (props) => {
 
 Breed.getInitialProps = async (props) => {
     console.log(props);
-    return await bs.loadData(props.query);
+    // return await bs.loadData(props.query);
+    return {breed: props.query.breed};
 }
 
 export default Breed;
