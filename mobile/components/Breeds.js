@@ -9,4 +9,8 @@ const Breeds = (props) => {
     return <BreedsScreen onClickHandler={onBreedClickHandler} />;
 };
 
+Breeds.navigationOptions = {
+    title: 'Index'
+};
+
 export default Breeds;

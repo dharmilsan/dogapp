@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import BreedScreen, * as bs from './../screens/BreedScreen';
+import withNavHeader from '../components/withNavHeader';
 
 const Breed = (props) => {
     console.log(props);
-    return <BreedScreen {...props} />;
+
+    const WrappedBreedScreen = withNavHeader(BreedScreen)({title: props.breed});
+    return <WrappedBreedScreen {...props} />;
 }
 
 Breed.getInitialProps = async (props) => {

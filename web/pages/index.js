@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Router from 'next/router'
 import BreedsScreen from './../screens/BreedsScreen';
+import withNavHeader from '../components/withNavHeader';
 
 const Breeds = (props) => {
     const onBreedClickHandler = (breed) => {
@@ -10,4 +11,4 @@ const Breeds = (props) => {
     return <BreedsScreen onClickHandler={onBreedClickHandler} />;
 };
 
-export default Breeds;
+export default withNavHeader(Breeds)({title: 'Breeds'});

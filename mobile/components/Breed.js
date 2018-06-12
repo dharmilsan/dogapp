@@ -6,4 +6,8 @@ const Breed = (props) => {
     return <BreedScreen breed={breed} {...props} />;
 }
 
+Breed.navigationOptions = {
+    title: 'Breed Page'
+};
+
 export default Breed;
