@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView } from 'react-native';
 const NavHeader = (props) => {
     return <View style={styles.container}>
         <View style={styles.content}>
-            <Text onPress={() => console.log("man")}>Back</Text>
+            <Text onPress={() => window.history.back()}>Back</Text>
             <Text>{props.title}</Text>
             <Text>Next</Text>
         </View>
