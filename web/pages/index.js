@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Router from 'next/router'
 import BreedsScreen from './../screens/BreedsScreen';
 import withNavHeader from '../components/withNavHeader';
+import withTabs from '../components/withTabs';
+import {mainTabProps, getHighlightedTabs} from '../routeConfig';
 
 const Breeds = (props) => {
     const onBreedClickHandler = (breed) => {
@@ -11,4 +13,7 @@ const Breeds = (props) => {
     return <BreedsScreen onClickHandler={onBreedClickHandler} />;
 };
 
-export default withNavHeader(Breeds)({title: 'Breeds'});
+export default withTabs(
+    withNavHeader(Breeds)({title: 'Breeds'})
+)
+({tabProps: getHighlightedTabs(mainTabProps, 0)});

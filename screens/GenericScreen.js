@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Text, View} from 'react-native';
 
-export default GenericScreen = (props) => {
-    return <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+const GenericScreen = (props) => {
+    const style = {flex: 1, justifyContent: 'center', alignItems: 'center'};
+    return <View style={style}>
             <Text>{props.text}</Text>
             </View>;
 }
+
+export default GenericScreen;
