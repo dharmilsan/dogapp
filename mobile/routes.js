@@ -25,6 +25,17 @@ const RootStack = createStackNavigator({
   navigationOptions: {...commonNavigationOptions}
 });
 
+RootStack.navigationOptions = ({ navigation }) => {
+  let tabBarVisible = true;
+  if (navigation.state.index > 0) {
+    tabBarVisible = false;
+  }
+
+  return {...commonNavigationOptions,
+    tabBarVisible
+  };
+}
+
 //need internal stackNavigators to display the header...
 
 const bottomTabs = createBottomTabNavigator(
@@ -48,14 +59,10 @@ const bottomTabs = createBottomTabNavigator(
       }, {navigationOptions: {...commonNavigationOptions}}),
     }
   },
-  // {navigationOptions: {tabBarIcon: <Icon name="cog" size={24} color="#3d85c3" />}}
   {navigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused, tintColor }) => {
       const { routeName } = navigation.state;
       let iconName;
-
-      // You can return any component that you like here! We usually use an
-      // icon component from react-native-vector-icons
       return <Icon name={routeNameIconMap[routeName]} size={20} color={tintColor} />;
     },
     tabBarOptions: {

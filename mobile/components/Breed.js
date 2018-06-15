@@ -6,8 +6,9 @@ const Breed = (props) => {
     return <BreedScreen breed={breed} {...props} />;
 }
 
-Breed.navigationOptions = {
-    title: 'Breed Page'
+Breed.navigationOptions = ({navigation}) => {
+    const breed = navigation.getParam('breed');
+    return {title: breed}
 };
 
 export default Breed;
