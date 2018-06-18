@@ -4,10 +4,10 @@ import withNavHeader from '../components/withNavHeader';
 import withTabs from '../components/withTabs';
 import {mainTabProps, getHighlightedTabs} from '../routeConfig';
 
-const Generic = (props) => {
+const Generic = (props) => {    
     const WrappedGenericScreen = withTabs(
-        withNavHeader(GenericScreen)({title: props.text})
-    )({tabProps: getHighlightedTabs(mainTabProps, 1)});
+        withNavHeader(GenericScreen)({title: props.text, hasBackButton: false})
+    )({tabProps: getHighlightedTabs(mainTabProps, props.index)});
 
     return <WrappedGenericScreen {...props} />;
 };

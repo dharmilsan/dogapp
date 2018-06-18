@@ -14,6 +14,6 @@ const Breeds = (props) => {
 };
 
 export default withTabs(
-    withNavHeader(Breeds)({title: 'Breeds'})
+    withNavHeader(Breeds)({title: 'Index', hasBackButton: false})
 )
 ({tabProps: getHighlightedTabs(mainTabProps, 0)});

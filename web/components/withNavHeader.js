@@ -14,11 +14,14 @@ const onPressHandler = (e, url) => {
 const NavHeader = (props) => {
     return <View style={styles.container}>
         <View style={styles.content}>
-            <View style = {styles.leftContainer}>
+            {props.hasBackButton !== false && <View style = {styles.leftContainer}>
                 <Text style={[styles.textColor, styles.leftButton]} onPress={(e) => onPressHandler(e, props.backUrl)}><i className="fas fa-arrow-left fa-lg"></i></Text>
-                <Text style={[styles.textColor, styles.titleStyle]}>{props.title}</Text>
-            </View>
-            <Text style={[styles.textColor, styles.right]}><i className="fas fa-share-alt-square fa-lg"></i></Text>
+                <Text style={[styles.textColor, styles.titleMargin, styles.titleFont]}>{props.title}</Text>
+            </View>}
+            {props.hasBackButton === false && <View style = {styles.leftContainer}>
+                <Text style = {[styles.textColor, styles.leftButton, styles.titleFont]}>{props.title}</Text>
+            </View>}
+            <Text style={[styles.textColor, styles.right]}>{props.rightContent}</Text>
         </View>
     </View>;
 }
@@ -26,6 +29,8 @@ const NavHeader = (props) => {
 NavHeader.propTypes = {
     title: PropTypes.string.isRequired,
     backUrl: PropTypes.string,
+    hasBackButton: PropTypes.boolean,
+    rightContent: PropTypes.node, 
 }
 
 const styles = StyleSheet.create({
@@ -51,8 +56,10 @@ const styles = StyleSheet.create({
     leftButton: {
         paddingLeft: 20,
     },
-    titleStyle: {
+    titleMargin: {
         marginLeft: 35,
+    },
+    titleFont: {
         fontSize: '1.25rem',
     },
     right: {
