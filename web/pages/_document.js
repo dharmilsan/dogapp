@@ -13,6 +13,12 @@ const normalizeNextElements = `
     display: flex;
     flex-direction: column;
     height: 100%;
+  },
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 `
 export default class MyDocument extends Document {

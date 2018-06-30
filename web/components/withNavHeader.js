@@ -29,7 +29,7 @@ const NavHeader = (props) => {
 NavHeader.propTypes = {
     title: PropTypes.string.isRequired,
     backUrl: PropTypes.string,
-    hasBackButton: PropTypes.boolean,
+    hasBackButton: PropTypes.bool,
     rightContent: PropTypes.node, 
 }
 
