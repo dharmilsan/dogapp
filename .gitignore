@@ -2,6 +2,8 @@ web/screens
 mobile/screens
 web/style42
 mobile/style42
+web/icons
+mobile/icons
 **/node_modules
 web/.next
 screens/.watchmanconfig

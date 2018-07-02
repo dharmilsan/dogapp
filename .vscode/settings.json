@@ -4,5 +4,9 @@
         "**/.git": true,
         "mobile/screens": true,
         "web/screens": true,
+	"mobile/icons": true,
+	"mobile/style42": true,
+	"web/icons": true,
+	"web/style42": true
     }
 }

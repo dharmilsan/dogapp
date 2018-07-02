@@ -1,0 +1,14 @@
+{
+  "name": "icons",
+  "version": "1.0.0",
+  "description": "Build react and react-native components from SVG icons.",
+  "scripts": {
+    "build-web": "./node_modules/\\@svgr/cli/bin/svgr --icon --replace-attr-values '#444=currentColor' -d web svgs",
+    "build-mobile": "./node_modules/\\@svgr/cli/bin/svgr --icon --template ReactNativeSVGTemplate.js --native -d mobile svgs"
+  },
+  "author": "Dharmil Shah",
+  "license": "ISC",
+  "dependencies": {
+    "@svgr/cli": "^2.0.0"
+  }
+}

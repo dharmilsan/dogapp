@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Text, View, Picker} from 'react-native';
 import DateTimePicker from './../style42/DateTimePicker';
+import Icon from '../icons/Icon';
 
 class GenericScreen extends React.Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class GenericScreen extends React.Component {
 
                 <Picker
                     selectedValue={this.state.language}
-                    style={{ height: '10%', width: '70%' }}
+                    style={{width: '70%' }}
                     onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
                     <Picker.Item label="Java" value="java" />
                     <Picker.Item label="JavaScript" value="js" />
@@ -53,6 +54,8 @@ class GenericScreen extends React.Component {
                 />
                 <Text>Date now is {this.state.date}</Text>
                 <Text> </Text>
+                <Text>Simple text</Text>
+                <Icon name="Facebook" color = "red" width="40" height="40"/><Icon color = "red" color="red" name = "Instagram" width="40" height="40" />
 
                 </View>;
     }
